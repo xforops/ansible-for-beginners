@@ -1,23 +1,9 @@
 all:
-  hosts:
-    server1: {}
-    server2: {}
   children:
     web:
       hosts:
-        www01.example.com: {}
-        www02.example.com: {}
-        www03.example.com: {}
-        www04.example.com: {}
-        www05.example.com: {}
-        www06.example.com: {}
-        www07.example.com: {}
-        www08.example.com: {}
-        www09.example.com: {}
-        www10.example.com: {}
+        www[01:50].example.com:
 
-
-ungrouped:
-  hosts:
-    server1: {}
-    server2: {}
+    db:
+      hosts:
+        www[01:50:2].example.com:
